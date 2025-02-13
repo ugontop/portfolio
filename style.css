@@ -1,0 +1,358 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: url('https://wallpapers.com/images/hd/dark-anime-background-7kiw0id7f8agq6t0.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+
+/* Profile Container */
+.container {
+    text-align: center;
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 3px solid white;
+}
+
+/* Social Icons */
+.socials a {
+    margin: 0 10px;
+    font-size: 24px;
+    color: white;
+    transition: 0.3s;
+}
+
+.socials a:hover {
+    color: cyan;
+}
+
+/* Navbar */
+.nav {
+    margin-top: 20px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 5px;
+    margin: 5px;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    background: white;
+    color: black;
+}
+
+.footer {
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+/* Overlay Base */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+}
+
+.overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Content Box */
+.content-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    width: 500px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    position: relative;
+    backdrop-filter: blur(10px);
+    transform: scale(0.9);
+    transition: transform 0.5s ease;
+}
+
+.overlay.active .content-box {
+    transform: scale(1);
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: red;
+}
+
+/* About Image Placeholder */
+.about-image {
+    width: 100%;
+    height: 120px;
+    background: url("https://w0.peakpx.com/wallpaper/75/639/HD-wallpaper-just-me-proud-confident-style-arrogant.jpg") no-repeat center center/cover;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+/* Projects Section */
+/* Projects Content Styling */
+.projects-content {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    width: 600px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    position: relative;
+}
+
+/* Projects Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Project Card */
+.project-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    border-left: 4px solid cyan;
+}
+
+.project-card i {
+    font-size: 24px;
+    color: cyan;
+    margin-bottom: 10px;
+}
+
+/* Hover Effect */
+.project-card:hover {
+    background: cyan;
+    color: black;
+    box-shadow: 0 0 15px cyan;
+    transform: scale(1.05);
+}
+
+
+
+/* Edits Section */
+#editsOverlay .edits-list {
+    text-align: left;
+    padding: 15px;
+}
+
+#editsOverlay .edits-list li {
+    margin: 10px 0;
+    list-style: none;
+    padding: 10px;
+    border-left: 4px solid cyan;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+.links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.link-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    background: rgba(0, 255, 255, 0.2);
+    padding: 12px 20px;
+    border-radius: 5px;
+    transition: 0.3s;
+    text-align: center;
+    border: 2px solid cyan;
+}
+
+.link-btn:hover {
+    background: cyan;
+    color: black;
+    box-shadow: 0 0 10px cyan;
+}
+
+
+
+/* Games Content Styling */
+.games-content {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    width: 650px;
+    border-radius: 12px;
+    color: #00ffff;
+    text-align: center;
+    box-shadow: 0 0 20px #00ffff;
+    backdrop-filter: blur(10px);
+    font-family: 'Press Start 2P', cursive;
+    position: relative;
+}
+
+/* Neon Grid */
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Game Card */
+.game-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+    cursor: pointer;
+    border-left: 4px solid #00ffff;
+    font-size: 14px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Game Icons */
+.game-card i {
+    font-size: 30px;
+    color: #00ffff;
+    margin-bottom: 10px;
+}
+
+/* Glitch Effect */
+.game-card::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #00ffff;
+    top: 0;
+    left: -100%;
+    transition: 0.3s;
+}
+
+.game-card:hover::before {
+    left: 0;
+}
+
+.game-card:hover {
+    background: rgba(0, 255, 255, 0.2);
+    box-shadow: 0 0 20px #00ffff;
+    transform: scale(1.05);
+}
+
+/* Close Button */
+.close-btn {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #00ffff;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transition: 0.3s;
+}
+
+.close-btn:hover {
+    color: red;
+    transform: scale(1.2);
+}
+
+/* Import Gaming Font */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.game-card a {
+    text-decoration: none;
+    color: #00ffff;
+    font-weight: bold;
+    display: block;
+    margin-top: 5px;
+    transition: 0.3s;
+}
+
+.game-card a:hover {
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #00ffff;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 2px solid #00ffff;
+    border-radius: 10px;
+    transition: 0.3s;
+    font-size: 18px;
+}
+
+.social-btn i {
+    font-size: 22px;
+}
+
+.social-btn:hover {
+    background: #ff00ff;
+    color: #000;
+    box-shadow: 0 0 10px #ff00ff;
+    transform: scale(1.1);
+}
